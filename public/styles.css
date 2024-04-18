@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    padding-top: 0px;
+    overflow-x: auto; /* Add horizontal scroll if content overflows */
+}
+
+/* Media query for phones */
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: 0px;
+    margin-top: 15px;
+}
+
+#setting-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    overflow-x: auto;
+
+}
+
+.gamemode {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.gamemode:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+#wordle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#word-display {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#guess-input {
+    display: flex;
+}
+
+#guess-input input {
+    padding: 10px;
+    width: calc(100% - 80px);
+    margin-right: 10px;
+}
+
+#guess-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#guess-input button:hover {
+    background-color: #0056b3;
+}
+
+#reveal-optimal {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#reveal-optimal:hover {
+    background-color: #0056b3;
+}
+
+.guess-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.guess-cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid black;
+}
+
+#grid-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 100%; /* Set a maximum width for the container */
+    overflow-x:auto; /* Add horizontal scroll if content overflows */
+}

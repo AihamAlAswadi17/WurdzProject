@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wurdz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <!-- For adding the toast functionality -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Wurdz</h1>
+        <div id="setting-container">
+            <div class="gamemode" onclick="startNewGame(3)">
+                3-Word
+            </div>
+            <div class="gamemode" onclick="startNewGame(4)">
+                4-Word
+            </div>
+            <div class="gamemode" onclick="startNewGame(5)">
+                5-Word
+            </div>
+            <div class="gamemode" onclick="startNewGame(6)">
+                6-Word
+            </div>
+            <div class="gamemode" onclick="startNewGame(7)">
+                7-Word
+            </div>
+        </div>
+
+        <div id="wordle-container">
+            <div id="grid-container">
+                <!-- We dynamically add rows and columns to allow for different sizes -->
+            </div>
+            <div id="guess-input">
+                <input type="text" id="guess" maxlength="5" placeholder="Enter your guess" autocomplete="off" autofocus="true">
+                <button onclick="submitGuess()">Submit</button>
+            </div>
+            <button id="reveal-optimal" onclick="revealOptimalWord()">Reveal optimal</button>
+        </div>
+    </div>
+</body>
+</html>
